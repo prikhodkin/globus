@@ -3,12 +3,254 @@
 <head>
   <meta charset="UTF-8">
   <title>Gulp v4.1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   @@include('../blocks/favicon/favicon.html')
   <script src="js/vendor.js"></script>
   <script src="js/general.js" defer></script>
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
+@@include('../blocks/header/header.html')
+<main>
+  <section class="promo">
+    <h1 class="visually-hidden">H1</h1>
+    <ul class="promo__list">
+      <li class="promo__item">
+        <p class="promo__title">Комплексное управление строительством</p>
+        <p class="promo__text">Организация и управление строительством объектов гражданского и промышленного назначения</p>
+        <a href="#" class="promo__button button">Перейти в услуги</a>
+      </li>
+    </ul>
+    <div class="promo__controls">
+      <button class="promo__control more">
+        <svg class="more__icon">
+          <use xlink:href="img/sprites/sprite.svg#icon"></use>
+        </svg>
+      </button>
+      <button class="promo__control more">
+        <svg class="more__icon">
+          <use xlink:href="img/sprites/sprite.svg#icon"></use>
+        </svg>
+      </button>
+    </div>
+  </section>
+  <section class="services">
+    <div class="services__top">
+      <h2 class="services__title title">Услуги <sup>12</sup></h2>
+      <a href="#" class="services__all button button__opacity">Все услуги</a>
+      <div class="services__controls controls">
+        <button class="controls__button">
+          <svg>
+            <use xlink:href="img/sprites/sprite.svg#icon"></use>
+          </svg>
+        </button>
+        <button class="controls__button">
+          <svg>
+            <use xlink:href="img/sprites/sprite.svg#icon"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <ul class="services__list">
+      <li class="services__item services-card">
+        <svg class="services-card__icon">
+          <use xlink:href="img/sprites/sprite.svg#icon"></use>
+        </svg>
+        <a href="#" class="services-card__name">Функция технического заказчика</a>
+        <p class="services-card__desc">Организация процесса строительства объектов гражданского и промышленного назначения</p>
+        <a href="#" class="services-card__more">Получить консультацию</a>
+      </li>
+      <li class="services__item">
+        <svg class="services__icon">
+          <use xlink:href="img/sprites/sprite.svg#icon"></use>
+        </svg>
+        <a href="#" class="services__name">Функция технического заказчика</a>
+        <p class="services__desc">Организация процесса строительства объектов гражданского и промышленного назначения</p>
+        <a href="#" class="services__more">Получить консультацию</a>
+      </li>
+      <li class="services__item">
+        <svg class="services__icon">
+          <use xlink:href="img/sprites/sprite.svg#icon"></use>
+        </svg>
+        <a href="#" class="services__name">Функция технического заказчика</a>
+        <p class="services__desc">Организация процесса строительства объектов гражданского и промышленного назначения</p>
+        <a href="#" class="services__more">Получить консультацию</a>
+      </li>
+    </ul>
+  </section>
+  <section class="warranty">
+    <h2 class="warranty__title">Гарантии</h2>
+    <div class="warranty__text">
+      <p>
+        <span>С 2005г.</span> наша команда осуществляет <a href="#">строительство объектов гражданского
+        и промышленного назначения</a>, а также <a href="">инжиниринг в строительной отрасли.</a>
+        Реализовано более 200 000м   объектов разного назначения.
+      </p>
+    </div>
+    <ul class="warranty__list">
+      <li class="warranty__item">
+        <p class="warranty__name">Гарантия лучшей цены</p>
+        <p class="warranty__desc">Работаем без посредников, гарантируем лучшую цену за оказываемые услуги и решение сложных вопросов.</p>
+      </li>
+      <li class="warranty__item">
+        <p class="warranty__name">Гарантия лучшей цены</p>
+        <p class="warranty__desc">Работаем без посредников, гарантируем лучшую цену за оказываемые услуги и решение сложных вопросов.</p>
+      </li>
+      <li class="warranty__item">
+        <p class="warranty__name">Гарантия лучшей цены</p>
+        <p class="warranty__desc">Работаем без посредников, гарантируем лучшую цену за оказываемые услуги и решение сложных вопросов.</p>
+      </li>
+      <li class="warranty__item">
+        <p class="warranty__name">Гарантия лучшей цены</p>
+        <p class="warranty__desc">Работаем без посредников, гарантируем лучшую цену за оказываемые услуги и решение сложных вопросов.</p>
+      </li>
+    </ul>
+  </section>
+  <section class="projects">
+    <div class="projects__top">
+      <h2 class="projects__title title">Наши проекты <sup>12</sup></h2>
+      <div class="projects__controls controls">
+        <button class="controls__button">
+          <svg>
+            <use xlink:href="img/sprites/sprite.svg#icon"></use>
+          </svg>
+        </button>
+        <button class="controls__button">
+          <svg>
+            <use xlink:href="img/sprites/sprite.svg#icon"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="projects__tabs tabs" data-tabs>
+      <ul class="tabs__list">
+        <li class="tabs__item tabs__item--active" data-tab="1">Завершенные проекты</li>
+        <li class="tabs__item" data-tab="2">Текущие проекты</li>
+      </ul>
+      <div class="tabs__content" data-content="1">
+        <ul class="projects__list">
+          <li class="projects__item project-card">
+            <a href="" class="project-card__img">
+              <picture>
+                <source type="image/webp" srcset="">
+                <img src="" alt="">
+              </picture>
+            </a>
+            <a href="#" class="project-card__title">ЖК «Евразия»</a>
+            <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+            <a href="#" class="project-card__more">Подробнее</a>
+          </li>
+          <li class="projects__item project-card">
+            <a href="" class="project-card__img">
+              <picture>
+                <source type="image/webp" srcset="">
+                <img src="" alt="">
+              </picture>
+            </a>
+            <a href="#" class="project-card__title">ЖК «Евразия»</a>
+            <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+            <a href="#" class="project-card__more">Подробнее</a>
+          </li>
+          <li class="projects__item project-card">
+            <a href="" class="project-card__img">
+              <picture>
+                <source type="image/webp" srcset="">
+                <img src="" alt="">
+              </picture>
+            </a>
+            <a href="#" class="project-card__title">ЖК «Евразия»</a>
+            <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+            <a href="#" class="project-card__more">Подробнее</a>
+          </li>
+        </ul>
+      </div>
+      <div class="tabs__content" data-content="2"></div>
+    </div>
+  </section>
+  <article class="callback">
+    <div class="callback__content">
+      <p class="callback__title">СВЯЖИТЕСЬ С НАМИ</p>
+      <p class="callback__desc">Если вам требуются наши услуги</p>
+    </div>
+    <div class="callback__right">
+      <form action="#" class="callback__form">
+        <input type="text"  class="callback__input">
+        <button class="callback__button button">Отправить</button>
+      </form>
+      <p class="callback__text">Нажимая на кнопку,  вы соглашаетесь с политикой конфиденциальсти</p>
+    </div>
+  </article>
+  <section class="media">
+    <div class="media__top">
+      <h2 class="media__title title">Медиа <sup>12</sup></h2>
+      <div class="media__controls controls">
+        <button class="controls__button">
+          <svg>
+            <use xlink:href="img/sprites/sprite.svg#icon"></use>
+          </svg>
+        </button>
+        <button class="controls__button">
+          <svg>
+            <use xlink:href="img/sprites/sprite.svg#icon"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <ul class="media__list">
+      <li class="media__item media-card">
+        <a href="" class="media-card__img">
+          <picture>
+            <source type="image/webp" srcset="">
+            <img src="" alt="">
+          </picture>
+        </a>
+        <ul class="media-card__list">
+          <li class="media-card__item">надзор</li>
+          <li class="media-card__item">стройка</li>
+        </ul>
+        <a href="#" class="media-card__name">Для чего нужно контролировать стройку</a>
+        <div class="media-card__bottom">
+          <span class="media-card__date">13.04.2020</span>
+          <a href="" class="media-card__button button">подробности</a>
+        </div>
+      </li>
+      <li class="media__item media-card">
+        <a href="" class="media-card__img">
+          <picture>
+            <source type="image/webp" srcset="">
+            <img src="" alt="">
+          </picture>
+        </a>
+        <ul class="media-card__list">
+          <li class="media-card__item">надзор</li>
+          <li class="media-card__item">стройка</li>
+        </ul>
+        <a href="#" class="media-card__name">Для чего нужно контролировать стройку</a>
+        <div class="media-card__bottom">
+          <span class="media-card__date">13.04.2020</span>
+          <a href="" class="media-card__button button">подробности</a>
+        </div>
+      </li>
+      <li class="media__item media-card">
+        <a href="" class="media-card__img">
+          <picture>
+            <source type="image/webp" srcset="">
+            <img src="" alt="">
+          </picture>
+        </a>
+        <ul class="media-card__list">
+          <li class="media-card__item">надзор</li>
+          <li class="media-card__item">стройка</li>
+        </ul>
+        <a href="#" class="media-card__name">Для чего нужно контролировать стройку</a>
+        <div class="media-card__bottom">
+          <span class="media-card__date">13.04.2020</span>
+          <a href="" class="media-card__button button">подробности</a>
+        </div>
+      </li>
+    </ul>
+  </section>
+</main>
+@@include('../blocks/footer/footer.html')
 </body>
 </html>
