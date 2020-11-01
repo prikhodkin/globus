@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Gulp v4.1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  @@include('../blocks/favicon/favicon.html')
+  <script src="js/vendor.js"></script>
+  <script src="js/general.js" defer></script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+@@include('../blocks/header/header.html')
+<main class="main">
+  <section class="main__breadcrumbs breadcrumbs">
+    <h2 class="visually-hidden">Хлебные крошки</h2>
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item"><a href="">Главная</a></li>
+      <li class="breadcrumbs__item">НАШИ ПРОЕКТЫ</li>
+    </ul>
+  </section>
+  <h1 class="main__title">НАШИ ПРОЕКТЫ</h1>
+  <ul class="main__categories">
+    <li class="main__category"><a href="#">Завершенные проекты</a></li>
+    <li class="main__category"><a href="#">Текущие проекты</a></li>
+  </ul>
+  <ul class="main__list">
+    <li class="projects__item project-card">
+      <a href="" class="project-card__img">
+        <picture>
+          <source type="image/webp" srcset="">
+          <img src="" alt="">
+        </picture>
+      </a>
+      <a href="#" class="project-card__title">ЖК «Евразия»</a>
+      <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+    </li>
+    <li class="projects__item project-card">
+      <a href="" class="project-card__img">
+        <picture>
+          <source type="image/webp" srcset="">
+          <img src="" alt="">
+        </picture>
+      </a>
+      <a href="#" class="project-card__title">ЖК «Евразия»</a>
+      <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+    </li>
+    <li class="projects__item project-card">
+      <a href="" class="project-card__img">
+        <picture>
+          <source type="image/webp" srcset="">
+          <img src="" alt="">
+        </picture>
+      </a>
+      <a href="#" class="project-card__title">ЖК «Евразия»</a>
+      <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+    </li>
+  </ul>
+  <ul class="main__pagination pagination">
+    <li class="pagination__item more pagination__item--prev">
+      <a href="">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#icon"></use>
+        </svg>
+      </a>
+    </li>
+    <li class="pagination__item"><a href="">1</a></li>
+    <li class="pagination__item"><a href="">2</a></li>
+    <li class="pagination__item more pagination__item--next">
+      <a href="">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#icon"></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</main>
+@@include('../blocks/footer/footer.html')
+</body>
+</html>
