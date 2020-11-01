@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Gulp v4.1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  @@include('../blocks/favicon/favicon.html')
+  <script src="js/vendor.js"></script>
+  <script src="js/general.js" defer></script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+@@include('../blocks/header/header.html')
+<main class="main">
+  <section class="main__breadcrumbs breadcrumbs">
+    <h2 class="visually-hidden">Хлебные крошки</h2>
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item"><a href="">Главная</a></li>
+      <li class="breadcrumbs__item">Контактная информация</li>
+    </ul>
+  </section>
+  <h1 class="main__title">Контактная информация</h1>
+  <p class="main__desc">Ниже представлены контактные данные ООО Глобус Групп, по любым вопросам обращайтесь. Свяжитесь с нами по телефону, электронной почте или воспользовавшись формой ниже.</p>
+  <section class="contacts">
+    <h2 class="visually-hidden">контакты</h2>
+    <ul class="contacts__list">
+      <li class="contacts__item">
+        <div class="contacts__label">
+          <svg class="contacts__icon">
+            <use xlink:href="img/sprites/sprite.svg#icon"></use>
+          </svg>
+          Адрес
+        </div>
+        <div class="contacts__text">
+          <p>620000,<br>
+            Свердловская область,<br>
+            г.Екатеринбург, ул. Малышева 73</p>
+        </div>
+      </li>
+      <li class="contacts__item">
+        <div class="contacts__label">
+          <svg class="contacts__icon">
+            <use xlink:href="img/sprites/sprite.svg#icon"></use>
+          </svg>
+          Телефоны
+        </div>
+        <div class="contacts__text">
+          <a href="">+7 343 543-43-23</a>
+          <a href="">+7 343 543-43-23</a>
+        </div>
+      </li>
+      <li class="contacts__item">
+        <div class="contacts__label">
+          <svg class="contacts__icon">
+            <use xlink:href="img/sprites/sprite.svg#icon"></use>
+          </svg>
+          Электронная почта
+        </div>
+        <div class="contacts__text">
+          <a href="">info@globus.com</a>
+        </div>
+      </li>
+    </ul>
+    <div class="contacts__map"></div>
+    <div class="contacts__content">
+      <h2>Банковские реквизиты</h2>
+      <ul>
+        <li><span>Банк</span> Свердловское отделение  №7823 ПАО Сбербанк г.Екатеринбург</li>
+        <li><span>БИК</span> 0349873434</li>
+        <li><span>Кор/счет</span> 3010711000000000234</li>
+        <li><span>Рас/счет</span> 4020302090989089</li>
+        <li><span>Счет</span> Расчетный</li>
+        <li><span>ОКПО</span> 0034324</li>
+        <li><span>ОГРН</span> 103453245432</li>
+        <li><span>ИНН</span> 345324543</li>
+        <li><span>КПП</span> 343231301</li>
+      </ul>
+      <a href="#" class="contacts__button">
+        <span class="contacts__circle">
+          <svg class="svg">
+            <use xlink:href="img/sprites/sprite.svg#icon"></use>
+          </svg>
+        </span>
+        <div class="contacts__body">
+          <p>Банковские реквизиты</p>
+          <span>Скачать (pdf)</span>
+        </div>
+      </a>
+    </div>
+  </section>
+  <article class="callback">
+    <div class="callback__content">
+      <p class="callback__title">СВЯЖИТЕСЬ С НАМИ</p>
+      <p class="callback__desc">Если вам требуются наши услуги</p>
+    </div>
+    <div class="callback__right">
+      <form action="#" class="callback__form">
+        <input type="text"  class="callback__input">
+        <button class="callback__button button">Отправить</button>
+      </form>
+      <p class="callback__text">Нажимая на кнопку,  вы соглашаетесь с политикой конфиденциальсти</p>
+    </div>
+  </article>
+</main>
+@@include('../blocks/footer/footer.html')
+</body>
+</html>
