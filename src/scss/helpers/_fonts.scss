@@ -1,3 +1,15 @@
 @font-face {
-  @include includeFont(200, $first-font, "Montserrat-Thin");
+  @include includeFont(400, $first-font, "PTSans-Caption");
+}
+
+@font-face {
+  @include includeFont(700, $first-font, "PTSans-CaptionBold");
+}
+
+@font-face {
+  @include includeFont(500, $second-font, "Gilroy-Medium");
+}
+
+@font-face {
+  @include includeFont(600, $second-font, "Gilroy-Semibold");
 }
