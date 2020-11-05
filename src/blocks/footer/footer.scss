@@ -1,0 +1,145 @@
+.footer {
+  padding: 30px 15px;
+  background-color: #17262f;
+}
+
+.footer__list {
+  @include list-reset;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 30px;
+}
+
+.footer__item {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  opacity: 1;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.footer__phone {
+  display: block;
+  margin-bottom: 14px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 19px;
+  font-family: $second-font;
+  color: #ffffff;
+  letter-spacing: 0.03em;
+  opacity: 1;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+
+.footer__email {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  font-family: $second-font;
+  color: #ffffff;
+  opacity: 1;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.footer__bottom {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #dddddd;
+}
+
+.footer__copyright {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+}
+
+.footer__politic {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  opacity: 1;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.footer__dev {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+
+  a {
+    opacity: 1;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__list {
+    display: flex;
+    grid-gap: unset;
+    margin-bottom: 0;
+  }
+
+  .footer__item {
+    &:not(:last-child) {
+      margin-right: 27px;
+    }
+  }
+
+  .footer__email {
+    display: block;
+    text-align: right;
+  }
+
+  .footer__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 33px;
+    padding-top: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    @include page-wrapper;
+    padding-top: 85px;
+    padding-bottom: 35px;
+  }
+
+  .footer__bottom {
+    padding-top: 65px;
+  }
+}
