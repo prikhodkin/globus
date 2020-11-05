@@ -34,6 +34,11 @@
   font-family: $second-font;
   color: #4f4f4f;
   letter-spacing: 0.03em;
+  transition: all 0.3s;
+
+  &:hover {
+    color: #1d69c9;
+  }
 }
 
 .services-card__desc {
@@ -50,6 +55,12 @@
   color: #a2a2a2;
   text-transform: uppercase;
 
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+  }
+
   &::before {
     @include pseudo;
     position: absolute;
@@ -58,5 +69,6 @@
     width: 50px;
     height: 2px;
     background: #1d69c9;
+    transition: all 0.3s;
   }
 }

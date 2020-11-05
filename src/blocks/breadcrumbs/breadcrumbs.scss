@@ -1,0 +1,29 @@
+.breadcrumbs__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.breadcrumbs__item {
+  font-size: 14px;
+  line-height: 18px;
+  color: #8e8e8e;
+
+  &:not(:last-child) {
+    display: flex;
+    align-items: center;
+
+    &::after {
+      @include pseudo;
+      width: 6px;
+      height: 9px;
+      margin: 0 10px;
+      background-image: url("../../img/seporator.svg");
+    }
+  }
+
+  &:last-child {
+    color: #38393a;
+  }
+}
