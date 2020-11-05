@@ -1,3 +1,19 @@
 .button {
-  background-color: aqua;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 20px;
+  font-weight: 600;
+  font-family: $second-font;
+  border-radius: 3px;
+
+  &--thin {
+    font-weight: 400;
+    font-size: 14px;
+    font-family: $first-font;
+    color: #1d69c9;
+    text-transform: uppercase;
+    border: 1px solid #1d69c9;
+  }
 }

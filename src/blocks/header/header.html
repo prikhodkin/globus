@@ -1,13 +1,16 @@
 <header class="header">
   <a href="#" class="header__logo logo">
     <picture class="logo__img">
-      <source type="image/webp" srcset="">
-      <img src="" alt="logo">
+      <source type="image/webp" srcset="../../img/logo.webp">
+      <img src="../../img/logo.png" alt="logo">
     </picture>
   </a>
-  <nav class="header__menu menu">
+  <nav class="header__menu menu" data-controller="menu">
+    <button class="burger" data-target="menu.trigger" data-action="click->menu#showMenu">
+      <span class="burger__inner">Открыть меню</span>
+    </button>
     <ul class="menu__list">
-      <li class="menu__item">
+      <li class="menu__item menu__item--parent" data-target="menu.item">
         <a href="#">Услуги</a>
         <span class="menu__arrow"></span>
         <ul class="menu__sub-list">
@@ -16,7 +19,7 @@
           <li class="menu__sub-item"><a href="#">Технический заказчик</a></li>
         </ul>
       </li>
-      <li class="menu__item">
+      <li class="menu__item menu__item--parent" data-target="menu.item">
         <a href="#">Клиентам</a>
         <span class="menu__arrow"></span>
         <ul class="menu__sub-list">
@@ -33,7 +36,7 @@
   </nav>
   <a href="#" class="header__search">
     <svg>
-      <use xlink:href="img/sprites/sprite.svg#icon"></use>
+      <use xlink:href="img/sprites/sprite.svg#icon__search"></use>
     </svg>
   </a>
   <a href="#" class="header__phone">8 800 551 34 23</a>

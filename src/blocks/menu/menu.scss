@@ -1,0 +1,134 @@
+.menu__list {
+  @include list-reset;
+  position: absolute;
+  top: 59px;
+  left: 0;
+  width: 100%;
+  padding: 20px 15px;
+  background: #ffffff;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+
+  &--active {
+    visibility: unset;
+    opacity: 1;
+  }
+}
+
+.menu__sub-list {
+  @include list-reset;
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.menu__item {
+  position: relative;
+  padding: 10px 0;
+  border-bottom: 1px solid #1d69c9;
+}
+
+.menu__sub-item {
+  padding: 5px 0;
+  padding-left: 10px;
+}
+
+
+.menu__arrow {
+  @include pseudo;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 39px;
+  height: 39px;
+  background-image: url("../../img/dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 1200px) {
+  .menu__list {
+    position: relative;
+    top: unset;
+    left: unset;
+    display: flex;
+    padding: 0;
+    background: transparent;
+    visibility: unset;
+    opacity: 1;
+  }
+
+  .menu__arrow {
+    top: 7px;
+    width: 7px;
+    height: 7px;
+    transition: all 0.3s;
+  }
+
+
+  .menu__sub-list {
+    position: absolute;
+    display: block;
+    padding: 35px 25px;
+    padding-right: 60px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    box-shadow: 0 0 4px rgba(29, 105, 201, 0.12);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+
+  .menu__sub-item {
+    padding: 0;
+    padding-left: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: $second-font;
+    color: #39393a;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #1d69c9;
+      border-color: #1d69c9;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .menu__item {
+    padding: 0;
+    letter-spacing: 0.03em;
+    border-bottom: none;
+
+
+    &:hover {
+      .menu__arrow {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:hover > .menu__sub-list {
+      visibility: unset;
+      opacity: 1;
+    }
+
+    &--parent {
+      padding-right: 12px;
+    }
+
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
