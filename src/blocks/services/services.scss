@@ -1,0 +1,8 @@
+.services {
+  padding: 30px 15px;
+}
+
+.services__list {
+  @include list-reset;
+}
+

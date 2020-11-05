@@ -1,0 +1,29 @@
+.title {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32px;
+  font-family: $second-font;
+  color: #03183d;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+
+  sup {
+    top: -15px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1d69c9;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 35px;
+    line-height: 42px;
+
+    sup {
+      top: -20px;
+    }
+  }
+}
