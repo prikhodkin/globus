@@ -1,0 +1,52 @@
+.manager {
+  box-sizing: border-box;
+  padding: 30px 35px;
+  background: #f8fafb;
+  border: 1px solid #ecf2f4;
+  border-radius: 3px;
+}
+
+.manager__img {
+  @include pseudo;
+
+
+  margin-bottom: 23px;
+
+  img {
+    width: 77px;
+    height: 77px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.manager__name {
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: #313336;
+}
+
+.manager__position {
+  margin-bottom: 20px;
+  font-size: 13px;
+  line-height: 24px;
+  color: #959bac;
+}
+
+.manager__contacts {
+  @include list-reset;
+  padding-top: 20px;
+  border-top: 1px solid #b8bec9;
+
+  li {
+    font-size: 16px;
+    line-height: 24px;
+    color: #247ffb;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}

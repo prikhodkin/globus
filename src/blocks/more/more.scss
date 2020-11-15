@@ -1,0 +1,26 @@
+.more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 43px;
+  min-width: 43px;
+  height: 43px;
+  background: #fafafa;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 0.3s;
+  appearance: none;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  svg {
+    width: 10px;
+    height: 17px;
+    margin-left: 2px;
+    fill: #1d69c9;
+  }
+}

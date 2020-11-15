@@ -1,0 +1,48 @@
+.single-project__title {
+  margin-bottom: 40px;
+  font-size: 24px;
+  line-height: 29px;
+  color: #232426;
+}
+
+.single-project__desc {
+  margin-bottom: 30px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.single-project__list {
+  @include list-reset;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 385px;
+  margin-bottom: 38px;
+}
+
+.single-project__item {
+  display: flex;
+  align-items: center;
+}
+
+.single-project__icon {
+  width: 48px;
+  height: 48px;
+  margin-right: 15px;
+}
+
+.single-project__label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #7b7b7b;
+}
+
+.single-project__value {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #000000;
+}

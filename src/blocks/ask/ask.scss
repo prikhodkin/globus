@@ -1,0 +1,32 @@
+.ask {
+  box-sizing: border-box;
+  padding: 30px 35px 40px 35px;
+  text-align: center;
+  background: #f8fafb;
+  border: 1px solid #ecf2f4;
+  border-radius: 3px;
+}
+
+
+.ask__button {
+  min-width: 164px;
+  height: 47px;
+  padding: 2px 15px 0 15px;
+}
+
+.ask__icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 25px;
+  fill: #313336;
+}
+
+.ask__text {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+  font-family: $second-font;
+  text-align: center;
+  color: #787777;
+}

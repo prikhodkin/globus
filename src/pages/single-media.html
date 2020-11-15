@@ -23,14 +23,14 @@
   <h1 class="main__title">Для чего нужно контролировать стройку</h1>
   <div class="main__inner">
     <aside class="main__sidebar sidebar">
-      <section class="sidebar__navigation">
-        <a href="#" class="navigation__button">Все медиа</a>
-        <nav class="navigation__inner">
+      <section class="sidebar__navigation navigation" data-controller="navigation">
+        <a href="javascript://" data-action="navigation#show" class="navigation__button">Все медиа</a>
+        <nav class="navigation__inner" data-target="navigation.target">
           <div class="navigation__header">
             <h2 class="navigation__title">Все услуги</h2>
-            <button class="navigation__close">
+            <button class="navigation__close" data-action="navigation#close" >
               <svg>
-                <use xlink:href="img/sprites/sprite.svg#icon"></use>
+                <use xlink:href="img/sprites/sprite.svg#icon__close"></use>
               </svg>
             </button>
           </div>
@@ -51,16 +51,16 @@
       <section class="sidebar__ask ask">
         <h2 class="visually-hidden">Задать вопрос</h2>
         <svg class="ask__icon">
-          <use xlink:href="img/sprites/sprite.svg#icon"></use>
+          <use xlink:href="img/sprites/sprite.svg#icon__list"></use>
         </svg>
         <p class="ask__text">Оформите заявку на сайте, мы свяжемся с вами в ближайшее время и ответим на все интересующие вопросы.</p>
-        <a href="" class="ask__button button"></a>
+        <a href="" class="ask__button button button--accent">задать вопрос</a>
       </section>
       <section class="sidebar__manager manager">
         <h2 class="visually-hidden">Медеджер</h2>
         <picture class="manager__img">
-          <source type="image/webp" srcset="">
-          <img src="" alt="">
+          <source type="image/webp" srcset="../img/media-01.webp">
+          <img src="../img/media-01.jpg" alt="">
         </picture>
         <p class="manager__name">Васекина Ирина</p>
         <p class="manager__position">РУКОВОДИТЕЛЬ УПРАВЛЕНИЯ МАРКЕТИНГА И КОММУНИКАЦИЙ</p>
@@ -72,7 +72,7 @@
     </aside>
     <div class="main__content">
       <div class="text-block">
-        <img src="" alt="">
+        <img src="../img/media-content.jpg" alt="">
         <p>Повседневная практика показывает, что сложившаяся структура организации требуют определения и уточнения модели развития. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки дальнейших направлений развития. Значимость этих проблем настолько очевидна, что начало повседневной работы по формированию позиции в значительной степени обуславливает создание соответствующий условий активизации. С другой стороны сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям.</p>
         <p>Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа соответствующий условий активизации. Таким образом сложившаяся структура организации требуют определения и уточнения новых предложений.</p>
         <p>Повседневная практика показывает, что сложившаяся структура организации требуют определения и уточнения новых предложений. Повседневная практика показывает, что начало повседневной работы по формированию позиции играет важную роль в формировании новых предложений. Равным образом укрепление и развитие структуры позволяет выполнять важные задания по разработке существенных финансовых и административных условий.</p>
@@ -83,53 +83,9 @@
         <a href="" class="main__back">Назад к списку</a>
         <a href="" class="main__share">Поделиться</a>
       </div>
-      <a href="" class="main__callback button">получить консультацию</a>
+      <a href="" class="main__callback button button--accent">получить консультацию</a>
     </div>
   </div>
-  <ul class="main__list">
-    <li class="main__item services-card">
-      <svg class="services-card__icon">
-        <use xlink:href="img/sprites/sprite.svg#icon"></use>
-      </svg>
-      <a href="#" class="services-card__name">Функция технического заказчика</a>
-      <p class="services-card__desc">Организация процесса строительства объектов гражданского и промышленного назначения</p>
-      <a href="#" class="services-card__more">Получить консультацию</a>
-    </li>
-    <li class="main__item services-card">
-      <svg class="services-card__icon">
-        <use xlink:href="img/sprites/sprite.svg#icon"></use>
-      </svg>
-      <a href="#" class="services-card__name">Функция технического заказчика</a>
-      <p class="services-card__desc">Организация процесса строительства объектов гражданского и промышленного назначения</p>
-      <a href="#" class="services-card__more">Получить консультацию</a>
-    </li>
-    <li class="main__item services-card">
-      <svg class="services-card__icon">
-        <use xlink:href="img/sprites/sprite.svg#icon"></use>
-      </svg>
-      <a href="#" class="services-card__name">Функция технического заказчика</a>
-      <p class="services-card__desc">Организация процесса строительства объектов гражданского и промышленного назначения</p>
-      <a href="#" class="services-card__more">Получить консультацию</a>
-    </li>
-  </ul>
-  <ul class="main__pagination pagination">
-    <li class="pagination__item more pagination__item--prev">
-      <a href="">
-        <svg>
-          <use xlink:href="img/sprites/sprite.svg#icon"></use>
-        </svg>
-      </a>
-    </li>
-    <li class="pagination__item"><a href="">1</a></li>
-    <li class="pagination__item"><a href="">2</a></li>
-    <li class="pagination__item more pagination__item--next">
-      <a href="">
-        <svg>
-          <use xlink:href="img/sprites/sprite.svg#icon"></use>
-        </svg>
-      </a>
-    </li>
-  </ul>
 </main>
 @@include('../blocks/footer/footer.html')
 </body>

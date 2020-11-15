@@ -1,0 +1,23 @@
+.sidebar__manager {
+  display: none;
+}
+
+.sidebar__ask {
+  display: none;
+}
+
+.sidebar__navigation {
+  margin-bottom: 40px;
+}
+
+
+@media (min-width: 1200px) {
+  .sidebar__ask {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .sidebar__manager {
+    display: block;
+  }
+}

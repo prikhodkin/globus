@@ -1,0 +1,52 @@
+.clients__list {
+  @include list-reset;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+
+.clients__inner {
+  position: relative;
+  display: flex;
+  min-height: 360px;
+  padding: 39px 35px;
+  background-image: url("../../img/clients-01.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.3s;
+
+  &::before {
+    @include pseudo;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(22, 22, 22, 0.3) 100%);
+  }
+}
+
+.clients__controls {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+.clients__name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+}
+
+
+@media (min-width: 950px) {
+  .clients__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

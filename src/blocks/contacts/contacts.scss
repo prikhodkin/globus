@@ -1,0 +1,145 @@
+.contacts__list {
+  @include list-reset;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  margin-bottom: 50px;
+}
+
+.contacts__item {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 30px 50px 30px;
+  background: #f5f7fa;
+  border-radius: 3px;
+}
+
+.contacts__label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: $second-font;
+
+  color: #1d69c9;
+}
+
+.contacts__icon {
+  width: 28px;
+  height: 28px;
+  margin-right: 13px;
+  fill: #1d69c9;
+}
+
+.contacts__text {
+  margin-top: auto;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  font-family: $second-font;
+  color: #676978;
+
+  a {
+    display: block;
+  }
+}
+
+.contacts__map {
+  margin-bottom: 47px;
+}
+
+
+.contacts__content {
+  margin-bottom: 100px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: $second-font;
+  color: #515151;
+
+  h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    color: #323d54;
+    letter-spacing: 0.03em;
+  }
+
+  ul {
+    @include list-reset;
+    margin-bottom: 46px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: #515151;
+
+    li {
+      display: flex;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      span {
+        display: block;
+        min-width: 100px;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.contacts__button {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  min-width: 70px;
+  height: 70px;
+  margin-right: 30px;
+  background: linear-gradient(90deg, #1c60c7 0%, #3380eb 100%);
+  border-radius: 50%;
+
+  svg {
+    width: 17px;
+    height: 17px;
+    margin-left: 2px;
+    fill: #ffffff;
+  }
+}
+
+.contacts__body {
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 26px;
+    color: #515151;
+  }
+
+  span {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
+    color: #1d69c9;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contacts__content {
+    ul {
+      li {
+        span {
+          min-width: 180px;
+        }
+      }
+    }
+  }
+}

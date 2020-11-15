@@ -23,14 +23,14 @@
   <h1 class="main__title">ЖК «еВРАЗИЯ» </h1>
   <div class="main__inner">
     <aside class="main__sidebar sidebar">
-      <section class="sidebar__navigation">
-        <a href="#" class="navigation__button">Все проекты</a>
-        <nav class="navigation__inner">
+      <section class="sidebar__navigation navigation" data-controller="navigation">
+        <a href="javascript://" data-action="navigation#show" class="navigation__button">Все проекты</a>
+        <nav class="navigation__inner" data-target="navigation.target">
           <div class="navigation__header">
             <h2 class="navigation__title">Все услуги</h2>
-            <button class="navigation__close">
+            <button class="navigation__close" data-action="navigation#close" >
               <svg>
-                <use xlink:href="img/sprites/sprite.svg#icon"></use>
+                <use xlink:href="img/sprites/sprite.svg#icon__close"></use>
               </svg>
             </button>
           </div>
@@ -51,16 +51,16 @@
       <section class="sidebar__ask ask">
         <h2 class="visually-hidden">Задать вопрос</h2>
         <svg class="ask__icon">
-          <use xlink:href="img/sprites/sprite.svg#icon"></use>
+          <use xlink:href="img/sprites/sprite.svg#icon__list"></use>
         </svg>
         <p class="ask__text">Оформите заявку на сайте, мы свяжемся с вами в ближайшее время и ответим на все интересующие вопросы.</p>
-        <a href="" class="ask__button button"></a>
+        <a href="" class="ask__button button button--accent">задать вопрос</a>
       </section>
       <section class="sidebar__manager manager">
         <h2 class="visually-hidden">Медеджер</h2>
         <picture class="manager__img">
-          <source type="image/webp" srcset="">
-          <img src="" alt="">
+          <source type="image/webp" srcset="../img/media-01.webp">
+          <img src="../img/media-01.jpg" alt="">
         </picture>
         <p class="manager__name">Васекина Ирина</p>
         <p class="manager__position">РУКОВОДИТЕЛЬ УПРАВЛЕНИЯ МАРКЕТИНГА И КОММУНИКАЦИЙ</p>
@@ -76,7 +76,7 @@
         <ul class="single-project__list">
           <li class="single-project__item">
             <svg class="single-project__icon">
-              <use xlink:href="img/sprites/sprite.svg#icon"></use>
+              <use xlink:href="img/sprites/sprite.svg#icon__house"></use>
             </svg>
             <div class="single-project__content">
               <span class="single-project__label">Этажность</span>
@@ -85,7 +85,7 @@
           </li>
           <li class="single-project__item">
             <svg class="single-project__icon">
-              <use xlink:href="img/sprites/sprite.svg#icon"></use>
+              <use xlink:href="img/sprites/sprite.svg#icon__plan"></use>
             </svg>
             <div class="single-project__content">
               <span class="single-project__label">Этажность</span>
@@ -101,48 +101,32 @@
         <h2>Чем мы можем быть полезны конкретному клиенту, какую боль ему можем закрыть</h2>
         <p>Технический надзор в строительстве успешно решит все задачи касаемо строительного объекта, начиная с предпроектного сбора документации и завершая вводом в эксплуатацию. Специалисты компании Глобус Групп помогут возвести безопасное и долговечное здание без финансовых и временных издержек.</p>
       </div>
-      <div class="gallery">
-        <div class="gallery__top">
+      <div class="gallery" data-controller="gallery">
+        <div class="gallery__top swiper-container" data-target="gallery.top">
           <div class="gallery__controls controls">
-            <button class="controls__button">
+            <button class="controls__button" data-target="gallery.prev">
               <svg>
-                <use xlink:href="img/sprites/sprite.svg#icon"></use>
+                <use xlink:href="img/sprites/sprite.svg#icon__prev"></use>
               </svg>
             </button>
-            <button class="controls__button">
+            <button class="controls__button" data-target="gallery.next">
               <svg>
-                <use xlink:href="img/sprites/sprite.svg#icon"></use>
+                <use xlink:href="img/sprites/sprite.svg#icon__next"></use>
               </svg>
             </button>
           </div>
-          <ul class="gallery__list">
-            <li class="gallery__item"><img src="" alt=""></li>
-            <li class="gallery__item"><img src="" alt=""></li>
+          <ul class="gallery__list swiper-wrapper">
+            <li class="gallery__item swiper-slide"><img src="../img/gallery.jpg" alt=""></li>
+            <li class="gallery__item swiper-slide"><img src="../img/gallery.jpg" alt=""></li>
+            <li class="gallery__item swiper-slide"><img src="../img/gallery.jpg" alt=""></li>
           </ul>
         </div>
-        <ul class="gallery__sub-list">
-          <li class="gallery__sub-item"><img src="" alt=""></li>
-          <li class="gallery__sub-item"><img src="" alt=""></li>
-        </ul>
-      </div>
-      <div class="slider">
-        <h2>Сертификаты и награды</h2>
-        <ul class="slider__list">
-          <li class="slider__item"><img src="" alt=""></li>
-          <li class="slider__item"><img src="" alt=""></li>
-          <li class="slider__item"><img src="" alt=""></li>
-        </ul>
-        <div class="slider__controls controls">
-          <button class="controls__button">
-            <svg>
-              <use xlink:href="img/sprites/sprite.svg#icon"></use>
-            </svg>
-          </button>
-          <button class="controls__button">
-            <svg>
-              <use xlink:href="img/sprites/sprite.svg#icon"></use>
-            </svg>
-          </button>
+        <div class="swiper-container" data-target="gallery.bottom">
+          <ul class="gallery__sub-list swiper-wrapper">
+            <li class="gallery__sub-item swiper-slide"><img src="../img/gallery.jpg" alt=""></li>
+            <li class="gallery__sub-item swiper-slide"><img src="../img/gallery.jpg" alt=""></li>
+            <li class="gallery__sub-item swiper-slide"><img src="../img/gallery.jpg" alt=""></li>
+          </ul>
         </div>
       </div>
       <div class="text-block">
@@ -151,48 +135,41 @@
         <p>Не следует, однако забывать, что новая модель организационной деятельности способствует подготовки и реализации форм развития. Таким образом новая модель организационной деятельности влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Равным образом рамки и место обучения кадров позволяет выполнять важные задания по разработке новых предложений. Таким образом реализация намеченных плановых заданий способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Разнообразный и богатый опыт сложившаяся структура организации в значительной степени обуславливает создание систем массового участия.</p>
         <p>Значимость этих проблем настолько очевидна, что сложившаяся структура организации позволяет выполнять важные задания по разработке новых предложений. Не следует, однако забывать, что реализация намеченных плановых заданий играет важную роль в формировании соответствующий условий активизации. Повседневная практика показывает, что рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям.</p>
       </div>
-      <div class="gallery">
-        <div class="gallery__top">
+      <div class="gallery" data-controller="gallery">
+        <div class="gallery__top swiper-container" data-target="gallery.top">
           <div class="gallery__controls controls">
-            <button class="controls__button">
+            <button class="controls__button" data-target="gallery.prev">
               <svg>
-                <use xlink:href="img/sprites/sprite.svg#icon"></use>
+                <use xlink:href="img/sprites/sprite.svg#icon__prev"></use>
               </svg>
             </button>
-            <button class="controls__button">
+            <button class="controls__button" data-target="gallery.next">
               <svg>
-                <use xlink:href="img/sprites/sprite.svg#icon"></use>
+                <use xlink:href="img/sprites/sprite.svg#icon__next"></use>
               </svg>
             </button>
           </div>
-          <ul class="gallery__list">
-            <li class="gallery__item"><img src="" alt=""></li>
-            <li class="gallery__item"><img src="" alt=""></li>
+          <ul class="gallery__list swiper-wrapper">
+            <li class="gallery__item swiper-slide"><img src="../img/gallery.jpg" alt=""></li>
+            <li class="gallery__item swiper-slide"><img src="../img/gallery.jpg" alt=""></li>
+            <li class="gallery__item swiper-slide"><img src="../img/gallery.jpg" alt=""></li>
           </ul>
         </div>
-        <ul class="gallery__sub-list">
-          <li class="gallery__sub-item"><img src="" alt=""></li>
-          <li class="gallery__sub-item"><img src="" alt=""></li>
-        </ul>
+        <div class="swiper-container" data-target="gallery.bottom">
+          <ul class="gallery__sub-list swiper-wrapper">
+            <li class="gallery__sub-item swiper-slide"><img src="../img/gallery.jpg" alt=""></li>
+            <li class="gallery__sub-item swiper-slide"><img src="../img/gallery.jpg" alt=""></li>
+            <li class="gallery__sub-item swiper-slide"><img src="../img/gallery.jpg" alt=""></li>
+          </ul>
+        </div>
       </div>
-      <section class="faq">
-        <h2 class="faq__title">Часто задаваемые вопросы</h2>
-        <ul class="faq__list">
-          <li class="faq__item">
-            <p class="faq__header">Вопрос 1</p>
-            <div class="faq__content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque consectetur cupiditate, dolore et libero minus nisi officia quis reprehenderit.</p>
-            </div>
-          </li>
-          <li class="faq__item">
-            <p class="faq__header">Вопрос 1</p>
-            <div class="faq__content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque consectetur cupiditate, dolore et libero minus nisi officia quis reprehenderit.</p>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <a href="" class="main__callback button">получить консультацию</a>
+      <div class="text-block">
+        <h2>Информация для заводов и фабрик</h2>
+        <p>С другой стороны консультация с широким активом представляет собой интересный эксперимент проверки дальнейших направлений развития. Задача организации, в особенности же новая модель организационной деятельности позволяет оценить значение системы обучения кадров, соответствует насущным потребностям. Товарищи! дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям. Не следует, однако забывать, что реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Таким образом консультация с широким активом требуют определения и уточнения форм развития.</p>
+        <p>Не следует, однако забывать, что новая модель организационной деятельности способствует подготовки и реализации форм развития. Таким образом новая модель организационной деятельности влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Равным образом рамки и место обучения кадров позволяет выполнять важные задания по разработке новых предложений. Таким образом реализация намеченных плановых заданий способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Разнообразный и богатый опыт сложившаяся структура организации в значительной степени обуславливает создание систем массового участия.</p>
+        <p>Значимость этих проблем настолько очевидна, что сложившаяся структура организации позволяет выполнять важные задания по разработке новых предложений. Не следует, однако забывать, что реализация намеченных плановых заданий играет важную роль в формировании соответствующий условий активизации. Повседневная практика показывает, что рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям.</p>
+      </div>
+      <a href="" class="main__callback button button--accent">получить консультацию</a>
     </div>
   </div>
 </main>

@@ -23,14 +23,14 @@
   <h1 class="main__title">функция технического заказчика</h1>
   <div class="main__inner">
     <aside class="main__sidebar sidebar">
-      <section class="sidebar__navigation">
-        <a href="#" class="navigation__button">Все услуги</a>
-        <nav class="navigation__inner">
+      <section class="sidebar__navigation navigation" data-controller="navigation">
+        <a href="javascript://" data-action="navigation#show" class="navigation__button">Все услуги</a>
+        <nav class="navigation__inner" data-target="navigation.target">
           <div class="navigation__header">
             <h2 class="navigation__title">Все услуги</h2>
-            <button class="navigation__close">
+            <button class="navigation__close" data-action="navigation#close" >
               <svg>
-                <use xlink:href="img/sprites/sprite.svg#icon"></use>
+                <use xlink:href="img/sprites/sprite.svg#icon__close"></use>
               </svg>
             </button>
           </div>
@@ -51,16 +51,16 @@
       <section class="sidebar__ask ask">
         <h2 class="visually-hidden">Задать вопрос</h2>
         <svg class="ask__icon">
-          <use xlink:href="img/sprites/sprite.svg#icon"></use>
+          <use xlink:href="img/sprites/sprite.svg#icon__list"></use>
         </svg>
         <p class="ask__text">Оформите заявку на сайте, мы свяжемся с вами в ближайшее время и ответим на все интересующие вопросы.</p>
-        <a href="" class="ask__button button"></a>
+        <a href="" class="ask__button button button--accent">задать вопрос</a>
       </section>
       <section class="sidebar__manager manager">
         <h2 class="visually-hidden">Медеджер</h2>
         <picture class="manager__img">
-          <source type="image/webp" srcset="">
-          <img src="" alt="">
+          <source type="image/webp" srcset="../img/media-01.webp">
+          <img src="../img/media-01.jpg" alt="">
         </picture>
         <p class="manager__name">Васекина Ирина</p>
         <p class="manager__position">РУКОВОДИТЕЛЬ УПРАВЛЕНИЯ МАРКЕТИНГА И КОММУНИКАЦИЙ</p>
@@ -74,7 +74,7 @@
       <div class="text-block">
       <h2>Описание услуги</h2>
       <p>Технический надзор в строительстве успешно решит все задачи касаемо строительного объекта, начиная с предпроектного сбора документации и завершая вводом в эксплуатацию. Специалисты компании Глобус Групп помогут возвести безопасное и долговечное здание без финансовых и временных издержек.</p>
-      <img src="" alt="">
+      <img src="../img/media-content.jpg" alt="">
       <h2>Что включает в себя услуга:</h2>
       <ul>
         <li>Подготовка и контроль качества технической документации на разных этапах  строительства: технического задания для инженерных изысканий и проектирования, исполнительных, рабочих и прочих документов.</li>
@@ -82,7 +82,7 @@
         <li>Получение разрешений в госорганах на предстоящие демонтажные и строительные работы, подключение к внешним коммуникациям и пр.</li>
         <li>Получение разрешений в госорганах на предстоящие демонтажные и строительные работы, подключение к внешним коммуникациям и пр.</li>
       </ul>
-      <img src="" alt="">
+      <img src="../img/media-content.jpg" alt="">
       <p>Технадзор в строительстве позволит сделать процесс возведения и оформления здания максимально прозрачным, управляемым и экономным для застройщика. Благодаря объективному подходу и опытным узкопрофильным специалистам Глобус Групп, все строительно-монтажные, инженерные и проектные работы будут выполняться без нарушений и непредвиденных затрат!</p>
       <h2>Почему именно мы или что мы закладываем в эту услугу</h2>
       <p>Успех строительства зависит от слаженной работы между всеми участниками строительства: проектировщиками, различным субподрядными организациями, поставщиками материалов и оборудования и пр. Служба технического заказчика СТК организует, обезопасит и проконтролирует четкое исполнение договорных обязательств каждой подрядной организацией. Наш техзаказчик проверит качество проведенных работ на каждом этапе, установит их соответствие с проектными данными и СНиПом. Удостоверится в грамотном составлении исполнительной и прочей документации.</p>
@@ -91,53 +91,9 @@
       <div class="main__controls">
         <a href="" class="main__back">Назад к списку</a>
       </div>
-      <a href="" class="main__callback button">получить консультацию</a>
+      <a href="" class="main__callback button button--accent">получить консультацию</a>
     </div>
   </div>
-  <ul class="main__list">
-    <li class="main__item services-card">
-      <svg class="services-card__icon">
-        <use xlink:href="img/sprites/sprite.svg#icon"></use>
-      </svg>
-      <a href="#" class="services-card__name">Функция технического заказчика</a>
-      <p class="services-card__desc">Организация процесса строительства объектов гражданского и промышленного назначения</p>
-      <a href="#" class="services-card__more">Получить консультацию</a>
-    </li>
-    <li class="main__item services-card">
-      <svg class="services-card__icon">
-        <use xlink:href="img/sprites/sprite.svg#icon"></use>
-      </svg>
-      <a href="#" class="services-card__name">Функция технического заказчика</a>
-      <p class="services-card__desc">Организация процесса строительства объектов гражданского и промышленного назначения</p>
-      <a href="#" class="services-card__more">Получить консультацию</a>
-    </li>
-    <li class="main__item services-card">
-      <svg class="services-card__icon">
-        <use xlink:href="img/sprites/sprite.svg#icon"></use>
-      </svg>
-      <a href="#" class="services-card__name">Функция технического заказчика</a>
-      <p class="services-card__desc">Организация процесса строительства объектов гражданского и промышленного назначения</p>
-      <a href="#" class="services-card__more">Получить консультацию</a>
-    </li>
-  </ul>
-  <ul class="main__pagination pagination">
-    <li class="pagination__item more pagination__item--prev">
-      <a href="">
-        <svg>
-          <use xlink:href="img/sprites/sprite.svg#icon"></use>
-        </svg>
-      </a>
-    </li>
-    <li class="pagination__item"><a href="">1</a></li>
-    <li class="pagination__item"><a href="">2</a></li>
-    <li class="pagination__item more pagination__item--next">
-      <a href="">
-        <svg>
-          <use xlink:href="img/sprites/sprite.svg#icon"></use>
-        </svg>
-      </a>
-    </li>
-  </ul>
 </main>
 @@include('../blocks/footer/footer.html')
 </body>
