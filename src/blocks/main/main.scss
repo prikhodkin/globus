@@ -1,5 +1,5 @@
 .main {
-  padding: 30px 15px;
+  padding: 30px 15px 80px 15px;
 }
 
 .main__tags {
@@ -16,8 +16,9 @@
 .main__categories {
   @include list-reset;
   display: flex;
-  flex-wrap: wrap;
   margin-bottom: 35px;
+  overflow: auto;
+  border-bottom: 1px solid #dde3f9;
 }
 
 .main__category {
@@ -27,13 +28,12 @@
   font-size: 14px;
   line-height: 19px;
   color: #39393a;
-  /* identical to box height */
-
   letter-spacing: 0.03em;
+  /* identical to box height */
+  white-space: nowrap;
 
   &:not(:last-child) {
-    margin-right: 49px;
-    margin-bottom: 14px;
+    margin-right: 20px;
   }
 
   &--active {
@@ -52,8 +52,8 @@
 
 .main__title {
   margin-bottom: 25px;
-  font-size: 25px;
-  line-height: 32px;
+  font-size: 30px;
+  line-height: 40px;
   color: #323d54;
   text-transform: uppercase;
 
@@ -74,7 +74,7 @@
 .main__callback {
   min-width: 222px;
   height: 71px;
-  margin-top: 67px;
+  margin-top: 20px;
   padding-right: 40px;
   padding-left: 40px;
 }
@@ -85,12 +85,18 @@
   box-sizing: border-box;
   min-width: 191px;
   height: 47px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   font-size: 15px;
   line-height: 24px;
   color: #000000;
   border: 1px solid #d1d1d1;
   border-radius: 3px;
+
+  transition: all 0.3s;
+
+  &:hover {
+    color: #1d69c9;
+  }
 
   &::before {
     @include pseudo;
@@ -111,13 +117,18 @@
   align-items: center;
   box-sizing: border-box;
   height: 47px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   padding-left: 16px;
   font-size: 15px;
   line-height: 24px;
   color: #000000;
   border: 1px solid #d1d1d1;
   border-radius: 3px;
+  transition: all 0.3s;
+
+  &:hover {
+    color: #1d69c9;
+  }
 
   &::after {
     @include pseudo;
@@ -148,11 +159,55 @@
   overflow: hidden;
 }
 
+.main__pagination + .main__callback {
+  margin-top: 40px;
+}
+
 @media (min-width: 1200px) {
   .main {
     @include page-wrapper;
     padding-top: 90px;
-    padding-bottom: 150px;
+    padding-bottom: 130px;
+  }
+
+
+  .main__pagination + .main__callback {
+    margin-top: 67px;
+  }
+
+  .main__categories {
+    &--inner {
+      padding-top: 35px;
+      padding-bottom: 22px;
+      border-top: 1px solid #dde3f9;
+
+      .main__category {
+        padding-bottom: 10px;
+        font-weight: 400;
+
+        &--active {
+          color: #39393a;
+          border-bottom: 3px solid #1d69c9;
+        }
+      }
+    }
+  }
+
+  .main__category {
+    opacity: 1;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:not(:last-child) {
+      margin-right: 49px;
+    }
+  }
+
+  .main__callback {
+    margin-top: 67px;
   }
 
   .main__inner {

@@ -3,6 +3,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eff2f5;
 }
 
 .header__search {
@@ -17,12 +19,13 @@
   display: none;
 }
 
+
 @media (min-width: 1200px) {
   .header {
     @include page-wrapper;
     justify-content: flex-start;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
   .header__logo {

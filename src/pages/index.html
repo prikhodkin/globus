@@ -12,57 +12,116 @@
 <body>
 @@include('../blocks/header/header.html')
 <main>
-  <section class="promo">
+  <section class="promo" data-controller="promo">
     <h1 class="visually-hidden">H1</h1>
-    <ul class="promo__list">
-      <li class="promo__item">
-        <p class="promo__title">Комплексное управление строительством</p>
-        <p class="promo__text">Организация и управление строительством объектов гражданского и промышленного назначения</p>
-        <a href="#" class="promo__button button">Перейти в услуги</a>
-      </li>
-    </ul>
+    <div class="swiper-container" data-target="promo.slider">
+      <ul class="promo__list swiper-wrapper">
+        <li class="promo__item swiper-slide">
+          <div class="promo__inner" style="background-image: url(../img/slide.jpg)">
+            <p class="promo__title">Комплексное управление строительством</p>
+            <p class="promo__text">Организация и управление строительством объектов гражданского и промышленного назначения</p>
+            <a href="#" class="promo__button button button--accent">Перейти в услуги</a>
+          </div>
+        </li>
+        <li class="promo__item swiper-slide">
+          <div class="promo__inner" style="background-image: url(../img/slide-02.jpg)">
+            <p class="promo__title">Технический заказчик</p>
+            <p class="promo__text">Организация строительства объектов гражданского и промышленного назначения</p>
+            <a href="#" class="promo__button button button--accent">Перейти в услуги</a>
+          </div>
+        </li>
+        <li class="promo__item swiper-slide">
+          <div class="promo__inner" style="background-image: url(../img/slide-03.jpg)">
+            <p class="promo__title">Генеральный подрядчик</p>
+            <p class="promo__text">Управление строительством объектов гражданского и промышленного назначения</p>
+            <a href="#" class="promo__button button button--accent">Перейти в услуги</a>
+          </div>
+        </li>
+        <li class="promo__item swiper-slide">
+          <div class="promo__inner" style="background-image: url(../img/slide-04.jpg)">
+            <p class="promo__title">Проектирование</p>
+            <p class="promo__text">Проектирование объектов гражданского и промышленного назначения</p>
+            <a href="#" class="promo__button button button--accent">Перейти в услуги</a>
+          </div>
+        </li>
+      </ul>
+    </div>
     <div class="promo__controls">
-      <button class="promo__control more">
+      <button class="promo__control " data-target="promo.prev">
         <svg class="more__icon">
-          <use xlink:href="img/sprites/sprite.svg#icon"></use>
+          <use xlink:href="img/sprites/sprite.svg#icon__prev"></use>
         </svg>
       </button>
-      <button class="promo__control more">
+      <button class="promo__control " data-target="promo.next">
         <svg class="more__icon">
-          <use xlink:href="img/sprites/sprite.svg#icon"></use>
+          <use xlink:href="img/sprites/sprite.svg#icon__next"></use>
         </svg>
       </button>
     </div>
   </section>
-  <section class="services">
+  <section class="services" data-controller="list">
     <div class="services__top">
       <h2 class="services__title title">Услуги <sup>12</sup></h2>
-      <a href="#" class="services__all button button__opacity">Все услуги</a>
-      <div class="services__controls controls">
-        <button class="controls__button">
-          <svg>
-            <use xlink:href="img/sprites/sprite.svg#icon"></use>
-          </svg>
-        </button>
-        <button class="controls__button">
-          <svg>
-            <use xlink:href="img/sprites/sprite.svg#icon"></use>
-          </svg>
-        </button>
+      <div class="services__wrapper">
+        <a href="#" class="services__all button button--opacity">Все услуги</a>
+        <div class="services__controls controls">
+          <button class="controls__button" data-target="list.prev">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#icon__control-prev"></use>
+            </svg>
+          </button>
+          <button class="controls__button" data-target="list.next">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#icon__control-next"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
-    <ul class="services__list">
-      <li class="services__item services-card">
-        <div class="services-card__icon">
-          <svg>
-            <use xlink:href="img/sprites/sprite.svg#icon__tech"></use>
-          </svg>
-        </div>
-        <a href="#" class="services-card__name">Функция технического заказчика</a>
-        <p class="services-card__desc">Организация процесса строительства объектов гражданского и промышленного назначения</p>
-        <a href="#" class="services-card__more">Получить консультацию</a>
-      </li>
-    </ul>
+    <div class="swiper-container" data-target="list.slider">
+      <ul class="services__list swiper-wrapper">
+        <li class="services__item swiper-slide services-card">
+          <div class="services-card__icon">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#icon__tech"></use>
+            </svg>
+          </div>
+          <a href="#" class="services-card__name">Функция технического заказчика</a>
+          <p class="services-card__desc">Организация процесса строительства объектов гражданского и промышленного назначения</p>
+          <a href="#" class="services-card__more">Получить консультацию</a>
+        </li>
+        <li class="services__item swiper-slide services-card">
+          <div class="services-card__icon">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#icon__tech"></use>
+            </svg>
+          </div>
+          <a href="#" class="services-card__name">Функция технического заказчика</a>
+          <p class="services-card__desc">Организация процесса строительства объектов гражданского и промышленного назначения</p>
+          <a href="#" class="services-card__more">Получить консультацию</a>
+        </li>
+        <li class="services__item swiper-slide services-card">
+          <div class="services-card__icon">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#icon__tech"></use>
+            </svg>
+          </div>
+          <a href="#" class="services-card__name">Функция технического заказчика</a>
+          <p class="services-card__desc">Организация процесса строительства объектов гражданского и промышленного назначения</p>
+          <a href="#" class="services-card__more">Получить консультацию</a>
+        </li>
+        <li class="services__item swiper-slide services-card">
+          <div class="services-card__icon">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#icon__tech"></use>
+            </svg>
+          </div>
+          <a href="#" class="services-card__name">Функция технического заказчика</a>
+          <p class="services-card__desc">Организация процесса строительства объектов гражданского и промышленного назначения</p>
+          <a href="#" class="services-card__more">Получить консультацию</a>
+        </li>
+      </ul>
+    </div>
   </section>
   <section class="warranty">
     <h2 class="warranty__title">Гарантии</h2>
@@ -92,149 +151,231 @@
       </li>
     </ul>
   </section>
-  <section class="projects">
+  <section class="projects" data-controller="list">
     <div class="projects__top">
       <h2 class="projects__title title">Наши проекты <sup>12</sup></h2>
       <div class="projects__controls controls">
-        <button class="controls__button">
+        <button class="controls__button" data-target="list.prev">
           <svg>
-            <use xlink:href="img/sprites/sprite.svg#icon"></use>
+            <use xlink:href="img/sprites/sprite.svg#icon__control-prev"></use>
           </svg>
         </button>
-        <button class="controls__button">
+        <button class="controls__button" data-target="list.next">
           <svg>
-            <use xlink:href="img/sprites/sprite.svg#icon"></use>
+            <use xlink:href="img/sprites/sprite.svg#icon__control-next"></use>
           </svg>
         </button>
       </div>
     </div>
     <div class="projects__tabs tabs" data-tabs>
       <ul class="tabs__list">
-        <li class="tabs__item tabs__item--active" data-tab="1">Завершенные проекты</li>
-        <li class="tabs__item" data-tab="2">Текущие проекты</li>
+        <li class="tabs__item tabs__item--active" data-action="click->list#init" data-tab="1">Завершенные проекты</li>
+        <li class="tabs__item" data-action="click->list#init" data-tab="2">Текущие проекты</li>
       </ul>
       <div class="tabs__content tabs__content--active" data-content="1">
-        <ul class="projects__list">
-          <li class="projects__item project-card">
-            <a href="" class="project-card__img">
-              <picture>
-                <source type="image/webp" srcset="../img/project-01.webp">
-                <img src="../img/project-01.jpg" alt="01">
-              </picture>
-            </a>
-            <a href="#" class="project-card__title">ЖК «Евразия»</a>
-            <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
-            <a href="#" class="project-card__more">Подробнее</a>
-          </li>
-          <li class="projects__item project-card">
-            <a href="" class="project-card__img">
-              <picture>
-                <source type="image/webp" srcset="../img/project-01.webp">
-                <img src="../img/project-01.jpg" alt="01">
-              </picture>
-            </a>
-            <a href="#" class="project-card__title">ЖК «Евразия»</a>
-            <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
-            <a href="#" class="project-card__more">Подробнее</a>
-          </li>
-          <li class="projects__item project-card">
-            <a href="" class="project-card__img">
-              <picture>
-                <source type="image/webp" srcset="../img/project-01.webp">
-                <img src="../img/project-01.jpg" alt="01">
-              </picture>
-            </a>
-            <a href="#" class="project-card__title">ЖК «Евразия»</a>
-            <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
-            <a href="#" class="project-card__more">Подробнее</a>
-          </li>
-        </ul>
+        <div class="swiper-container" data-target="list.slider">
+          <ul class="projects__list swiper-wrapper">
+            <li class="projects__item swiper-slide project-card">
+              <a href="" class="project-card__img">
+                <picture>
+                  <source type="image/webp" srcset="../img/project-01.webp">
+                  <img src="../img/project-01.jpg" alt="01">
+                </picture>
+              </a>
+              <a href="#" class="project-card__title">ЖК «Евразия»</a>
+              <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+              <a href="#" class="project-card__more">Подробнее</a>
+            </li>
+            <li class="projects__item swiper-slide project-card">
+              <a href="" class="project-card__img">
+                <picture>
+                  <source type="image/webp" srcset="../img/project-01.webp">
+                  <img src="../img/project-01.jpg" alt="01">
+                </picture>
+              </a>
+              <a href="#" class="project-card__title">ЖК «Евразия»</a>
+              <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+              <a href="#" class="project-card__more">Подробнее</a>
+            </li>
+            <li class="projects__item swiper-slide project-card">
+              <a href="" class="project-card__img">
+                <picture>
+                  <source type="image/webp" srcset="../img/project-01.webp">
+                  <img src="../img/project-01.jpg" alt="01">
+                </picture>
+              </a>
+              <a href="#" class="project-card__title">ЖК «Евразия»</a>
+              <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+              <a href="#" class="project-card__more">Подробнее</a>
+            </li>
+            <li class="projects__item swiper-slide project-card">
+              <a href="" class="project-card__img">
+                <picture>
+                  <source type="image/webp" srcset="../img/project-01.webp">
+                  <img src="../img/project-01.jpg" alt="01">
+                </picture>
+              </a>
+              <a href="#" class="project-card__title">ЖК «Евразия»</a>
+              <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+              <a href="#" class="project-card__more">Подробнее</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="tabs__content" data-content="2"></div>
+      <div class="tabs__content" data-content="2">
+        <div class="swiper-container" data-target="list.slider">
+          <ul class="projects__list swiper-wrapper">
+            <li class="projects__item swiper-slide project-card">
+              <a href="" class="project-card__img">
+                <picture>
+                  <source type="image/webp" srcset="../img/project-01.webp">
+                  <img src="../img/project-01.jpg" alt="01">
+                </picture>
+              </a>
+              <a href="#" class="project-card__title">ЖК «Евразия»</a>
+              <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+              <a href="#" class="project-card__more">Подробнее</a>
+            </li>
+            <li class="projects__item swiper-slide project-card">
+              <a href="" class="project-card__img">
+                <picture>
+                  <source type="image/webp" srcset="../img/project-01.webp">
+                  <img src="../img/project-01.jpg" alt="01">
+                </picture>
+              </a>
+              <a href="#" class="project-card__title">ЖК «Евразия»</a>
+              <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+              <a href="#" class="project-card__more">Подробнее</a>
+            </li>
+            <li class="projects__item swiper-slide project-card">
+              <a href="" class="project-card__img">
+                <picture>
+                  <source type="image/webp" srcset="../img/project-01.webp">
+                  <img src="../img/project-01.jpg" alt="01">
+                </picture>
+              </a>
+              <a href="#" class="project-card__title">ЖК «Евразия»</a>
+              <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+              <a href="#" class="project-card__more">Подробнее</a>
+            </li>
+            <li class="projects__item swiper-slide project-card">
+              <a href="" class="project-card__img">
+                <picture>
+                  <source type="image/webp" srcset="../img/project-01.webp">
+                  <img src="../img/project-01.jpg" alt="01">
+                </picture>
+              </a>
+              <a href="#" class="project-card__title">ЖК «Евразия»</a>
+              <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+              <a href="#" class="project-card__more">Подробнее</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
   <article class="callback">
+    <h2 class="visually-hidden">Связаться с нами</h2>
     <div class="callback__content">
       <p class="callback__title">СВЯЖИТЕСЬ С НАМИ</p>
       <p class="callback__desc">Если вам требуются наши услуги</p>
     </div>
     <div class="callback__right">
       <form action="#" class="callback__form">
-        <input type="text"  class="callback__input">
+        <input type="text" placeholder="+7 ( ___ ) ___-__-__" class="callback__input js-mask">
         <button class="callback__button button">Отправить</button>
       </form>
       <p class="callback__text">Нажимая на кнопку,  вы соглашаетесь с политикой конфиденциальсти</p>
     </div>
   </article>
-  <section class="media">
+  <section class="media" data-controller="list">
     <div class="media__top">
       <h2 class="media__title title">Медиа <sup>12</sup></h2>
       <div class="media__controls controls">
-        <button class="controls__button">
+        <button class="controls__button" data-target="list.prev">
           <svg>
-            <use xlink:href="img/sprites/sprite.svg#icon"></use>
+            <use xlink:href="img/sprites/sprite.svg#icon__control-prev"></use>
           </svg>
         </button>
-        <button class="controls__button">
+        <button class="controls__button" data-target="list.next">
           <svg>
-            <use xlink:href="img/sprites/sprite.svg#icon"></use>
+            <use xlink:href="img/sprites/sprite.svg#icon__control-next"></use>
           </svg>
         </button>
       </div>
     </div>
-    <ul class="media__list">
-      <li class="media__item media-card">
-        <a href="" class="media-card__img">
-          <picture>
-            <source type="image/webp" srcset="../img/media-01.webp">
-            <img src="../img/media-01.jpg" alt="">
-          </picture>
-        </a>
-        <ul class="media-card__list">
-          <li class="media-card__item">надзор</li>
-          <li class="media-card__item">стройка</li>
-        </ul>
-        <a href="#" class="media-card__name">Для чего нужно контролировать стройку</a>
-        <div class="media-card__bottom">
-          <span class="media-card__date">13.04.2020</span>
-          <a href="" class="media-card__button button">подробности</a>
-        </div>
-      </li>
-      <li class="media__item media-card">
-        <a href="" class="media-card__img">
-          <picture>
-            <source type="image/webp" srcset="../img/media-01.webp">
-            <img src="../img/media-01.jpg" alt="">
-          </picture>
-        </a>
-        <ul class="media-card__list">
-          <li class="media-card__item">надзор</li>
-          <li class="media-card__item">стройка</li>
-        </ul>
-        <a href="#" class="media-card__name">Для чего нужно контролировать стройку</a>
-        <div class="media-card__bottom">
-          <span class="media-card__date">13.04.2020</span>
-          <a href="" class="media-card__button button">подробности</a>
-        </div>
-      </li>
-      <li class="media__item media-card">
-        <a href="" class="media-card__img">
-          <picture>
-            <source type="image/webp" srcset="../img/media-01.webp">
-            <img src="../img/media-01.jpg" alt="">
-          </picture>
-        </a>
-        <ul class="media-card__list">
-          <li class="media-card__item">надзор</li>
-          <li class="media-card__item">стройка</li>
-        </ul>
-        <a href="#" class="media-card__name">Для чего нужно контролировать стройку</a>
-        <div class="media-card__bottom">
-          <span class="media-card__date">13.04.2020</span>
-          <a href="" class="media-card__button button">подробности</a>
-        </div>
-      </li>
-    </ul>
+    <div class="swiper-container" data-target="list.slider">
+      <ul class="media__list swiper-wrapper">
+        <li class="media__item swiper-slide media-card">
+          <a href="" class="media-card__img">
+            <picture>
+              <source type="image/webp" srcset="../img/media-01.webp">
+              <img src="../img/media-01.jpg" alt="">
+            </picture>
+          </a>
+          <ul class="media-card__list">
+            <li class="media-card__item">надзор</li>
+            <li class="media-card__item">стройка</li>
+          </ul>
+          <a href="#" class="media-card__name">Для чего нужно контролировать стройку</a>
+          <div class="media-card__bottom">
+            <span class="media-card__date">13.04.2020</span>
+            <a href="" class="media-card__button button">подробности</a>
+          </div>
+        </li>
+        <li class="media__item swiper-slide media-card">
+          <a href="" class="media-card__img">
+            <picture>
+              <source type="image/webp" srcset="../img/media-01.webp">
+              <img src="../img/media-01.jpg" alt="">
+            </picture>
+          </a>
+          <ul class="media-card__list">
+            <li class="media-card__item">надзор</li>
+            <li class="media-card__item">стройка</li>
+          </ul>
+          <a href="#" class="media-card__name">Для чего нужно контролировать стройку</a>
+          <div class="media-card__bottom">
+            <span class="media-card__date">13.04.2020</span>
+            <a href="" class="media-card__button button">подробности</a>
+          </div>
+        </li>
+        <li class="media__item swiper-slide media-card">
+          <a href="" class="media-card__img">
+            <picture>
+              <source type="image/webp" srcset="../img/media-01.webp">
+              <img src="../img/media-01.jpg" alt="">
+            </picture>
+          </a>
+          <ul class="media-card__list">
+            <li class="media-card__item">надзор</li>
+            <li class="media-card__item">стройка</li>
+          </ul>
+          <a href="#" class="media-card__name">Для чего нужно контролировать стройку</a>
+          <div class="media-card__bottom">
+            <span class="media-card__date">13.04.2020</span>
+            <a href="" class="media-card__button button">подробности</a>
+          </div>
+        </li>
+        <li class="media__item swiper-slide media-card">
+          <a href="" class="media-card__img">
+            <picture>
+              <source type="image/webp" srcset="../img/media-01.webp">
+              <img src="../img/media-01.jpg" alt="">
+            </picture>
+          </a>
+          <ul class="media-card__list">
+            <li class="media-card__item">надзор</li>
+            <li class="media-card__item">стройка</li>
+          </ul>
+          <a href="#" class="media-card__name">Для чего нужно контролировать стройку</a>
+          <div class="media-card__bottom">
+            <span class="media-card__date">13.04.2020</span>
+            <a href="" class="media-card__button button">подробности</a>
+          </div>
+        </li>
+      </ul>
+    </div>
   </section>
 </main>
 @@include('../blocks/footer/footer.html')

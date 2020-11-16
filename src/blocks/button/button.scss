@@ -36,7 +36,29 @@
     border-radius: 3px;
 
     &:hover {
-      background: linear-gradient(0deg, #4f84eb 0%, #2861cf 100%);
+      background: linear-gradient(90deg, #3480ea 0%, #1654b3 100%);
+    }
+  }
+
+  &--opacity {
+    box-sizing: border-box;
+    height: 50px;
+    padding: 0 40px;
+    padding-top: 2px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #a2a6ab;
+    text-transform: uppercase;
+    background: transparent;
+    border: 1px solid #cbcbdd;
+    border-radius: 3px;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #ffffff;
+      background: #1d69c9;
+      border-color: transparent;
     }
   }
 }

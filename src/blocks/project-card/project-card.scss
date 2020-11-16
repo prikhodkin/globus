@@ -1,5 +1,14 @@
 .project-card {
   padding: 30px;
+  //margin: 2px;
+  border: 1px solid #cbcbdd;
+  box-shadow: none;
+  transition: all 0.3s;
+
+  &:hover {
+    border-color: #cbcbdd;
+    //box-shadow: 0px 0px 4px #CBCFD4;
+  }
 }
 
 .project-card__img {
@@ -39,10 +48,24 @@
 }
 
 .project-card__more {
-  display: inline-block;
-  margin-top: 50px;
+  display: block;
+  margin-top: 25px;
+  padding-top: 25px;
   font-size: 15px;
   line-height: 20px;
   color: #a2a2a2;
   text-transform: uppercase;
+  border-top: 1px solid #ededed;
+  transition: all 0.3s;
+
+  &:hover {
+    color: #1d69c9;
+    border-color: #1d69c9;
+  }
+}
+
+@media (min-width: 1200px) {
+  .project-card {
+    border-color: transparent;
+  }
 }

@@ -4,6 +4,11 @@
   min-height: 510px;
   padding: 30px;
   border: 1px solid #eaeaea;
+  transition: all 0.3s;
+
+  &:hover {
+    border-color: #cbcbdd;
+  }
 }
 
 .media-card__img {
@@ -75,6 +80,10 @@
   letter-spacing: 0.1em;
   background: linear-gradient(90deg, #1c60c7 0%, #3380eb 100%);
   border-radius: 0;
+
+  &:hover {
+    background: linear-gradient(90deg, #3480ea 0%, #1654b3 100%);
+  }
 }
 
 

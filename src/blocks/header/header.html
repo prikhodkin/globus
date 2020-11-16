@@ -1,5 +1,5 @@
 <header class="header">
-  <a href="#" class="header__logo logo">
+  <a href="index.html" class="header__logo logo">
     <picture class="logo__img">
       <source type="image/webp" srcset="../../img/logo.webp">
       <img src="../../img/logo.png" alt="logo">
@@ -34,7 +34,7 @@
       <li class="menu__item"><a href="contacts.html">Контакты</a></li>
     </ul>
   </nav>
-  <a href="#" class="header__search">
+  <a href="javascript://" class="header__search js-search">
     <svg>
       <use xlink:href="img/sprites/sprite.svg#icon__search"></use>
     </svg>
@@ -42,3 +42,15 @@
   <a href="#" class="header__phone">8 800 551 34 23</a>
   <a href="#" class="header__callback button button--thin">Заказать звонок</a>
 </header>
+<section class="search">
+  <h2 class="visually-hidden">Поиск по сайту</h2>
+  <button class="search__close">
+    <svg>
+      <use xlink:href="img/sprites/sprite.svg#icon__close"></use>
+    </svg>
+  </button>
+  <form action="#" class="search__form">
+    <input type="text" class="search__input" placeholder="Поиск">
+  </form>
+  <p class="search__text">Например: Технический надзор</p>
+</section>

@@ -7,12 +7,17 @@
 
 .breadcrumbs__item {
   font-size: 14px;
-  line-height: 18px;
+  line-height: 22px;
   color: #8e8e8e;
+  transition: all 0.3s;
 
   &:not(:last-child) {
     display: flex;
     align-items: center;
+
+    &:hover {
+      color: #1d69c9;
+    }
 
     &::after {
       @include pseudo;

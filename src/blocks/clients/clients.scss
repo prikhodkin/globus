@@ -5,6 +5,15 @@
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
 }
 
+.clients__more {
+  padding: 0;
+
+  svg {
+    width: 10px;
+    height: 17px;
+  }
+}
+
 .clients__inner {
   position: relative;
   display: flex;
@@ -14,7 +23,18 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  border-radius: 3px;
   transition: all 0.3s;
+
+  &:hover {
+    .clients__more {
+      background-color: #1d69c9;
+
+      svg {
+        fill: #ffffff;
+      }
+    }
+  }
 
   &::before {
     @include pseudo;

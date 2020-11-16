@@ -1,0 +1,133 @@
+.warranty {
+  padding: 30px 15px;
+  background: linear-gradient(90deg, #fafcff 0%, #f1f7ff 100%);
+}
+
+.warranty__title {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: $second-font;
+  color: #9ea2a8;
+  letter-spacing: 0.05em;
+}
+
+.warranty__text {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 32px;
+  font-family: $second-font;
+  color: #000000;
+  letter-spacing: 0.01em;
+
+  span {
+    color: #1d69c9;
+  }
+
+  a {
+    color: #98a5c0;
+    text-decoration: underline;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #1d69c9;
+    }
+  }
+}
+
+.warranty__list {
+  @include list-reset;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  margin-bottom: 40px;
+}
+
+.warranty__item {
+  position: relative;
+  padding: 40px 35px 80px 0;
+  border-bottom: 1px solid #cbcbdd;
+  transition: all 0.3s;
+
+  &:hover {
+    border-color: #1d69c9;
+
+    &::before {
+      background: #1d69c9;
+    }
+
+    &::after {
+      background: #1d69c9;
+    }
+
+    .warranty__name {
+      &::before {
+        background: linear-gradient(90deg, #1c60c7 0%, #3380eb 100%);
+      }
+    }
+  }
+
+  &::before {
+    @include pseudo;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 1px;
+    background: #cbcbdd;
+    transition: all 0.3s;
+  }
+
+  &::after {
+    @include pseudo;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height: 90%;
+    background: #cbcbdd;
+    transition: all 0.3s;
+  }
+}
+
+.warranty__name {
+  margin-bottom: 32px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 29px;
+  font-family: $second-font;
+  color: #4f4f4f;
+  letter-spacing: 0.03em;
+
+  &::before {
+    @include pseudo;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 11px;
+    height: 11px;
+    background: #cbcbdd;
+  }
+}
+
+.warranty__desc {
+  font-size: 15px;
+  line-height: 23px;
+  color: #858c92;
+}
+
+@media (min-width: 1200px) {
+  .warranty {
+    @include page-wrapper;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .warranty__text {
+    margin-bottom: 86px;
+    font-size: 31px;
+    line-height: 46px;
+  }
+}

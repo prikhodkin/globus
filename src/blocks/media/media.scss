@@ -1,0 +1,36 @@
+.media {
+  padding: 60px 15px 100px 15px;
+}
+
+.media__list {
+  @include list-reset;
+}
+
+.media__controls {
+  display: flex;
+
+  .controls__button {
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+}
+
+.media__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 1200px) {
+  .media {
+    @include page-wrapper;
+    padding-top: 104px;
+    padding-bottom: 150px;
+  }
+
+  .media__top {
+    margin-bottom: 67px;
+  }
+}
