@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Gulp v4.1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png" data-mce-href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png" data-mce-href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png" data-mce-href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png" data-mce-href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png" data-mce-href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png" data-mce-href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png" data-mce-href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png" data-mce-href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png" data-mce-href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32" data-mce-href="/favicon-32x32.png">
+<link rel="icon" type="image/png" href="img/favicons/android-chrome-192x192.png" sizes="192x192" data-mce-href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" href="img/favicons/favicon-96x96.png" sizes="96x96" data-mce-href="/favicon-96x96.png">
+<link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16" data-mce-href="/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="img/favicons//mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+  <script src="js/vendor.js"></script>
+  <script src="js/general.js" defer></script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header class="header">
+  <a href="index.html" class="header__logo logo">
+    <picture class="logo__img">
+      <source type="image/webp" srcset="img/logo.webp">
+      <img src="img/logo.png" alt="logo">
+    </picture>
+  </a>
+  <nav class="header__menu menu" data-controller="menu">
+    <button class="burger" data-target="menu.trigger" data-action="click->menu#showMenu">
+      <span class="burger__inner">Открыть меню</span>
+    </button>
+    <ul class="menu__list">
+      <li class="menu__item menu__item--parent" data-target="menu.item">
+        <a href="services.html">Услуги</a>
+        <span class="menu__arrow"></span>
+        <ul class="menu__sub-list">
+          <li class="menu__sub-item"><a href="#">Технический заказчик</a></li>
+          <li class="menu__sub-item"><a href="#">Технический заказчик</a></li>
+          <li class="menu__sub-item"><a href="#">Технический заказчик</a></li>
+        </ul>
+      </li>
+      <li class="menu__item menu__item--parent" data-target="menu.item">
+        <a href="clients.html">Клиентам</a>
+        <span class="menu__arrow"></span>
+        <ul class="menu__sub-list">
+          <li class="menu__sub-item"><a href="#">Технический заказчик</a></li>
+          <li class="menu__sub-item"><a href="#">Технический заказчик</a></li>
+          <li class="menu__sub-item"><a href="#">Технический заказчик</a></li>
+        </ul>
+      </li>
+      <li class="menu__item"><a href="projects.html">Портфолио</a></li>
+      <li class="menu__item"><a href="media.html">Медиа</a></li>
+      <li class="menu__item"><a href="reviews.html">Отзывы</a></li>
+      <li class="menu__item"><a href="contacts.html">Контакты</a></li>
+    </ul>
+  </nav>
+  <a href="javascript://" class="header__search js-search">
+    <svg>
+      <use xlink:href="img/sprites/sprite.svg#icon__search"></use>
+    </svg>
+  </a>
+  <a href="#" class="header__phone">8 800 551 34 23</a>
+  <a href="#" class="header__callback button button--thin">Заказать звонок</a>
+</header>
+<section class="search">
+  <h2 class="visually-hidden">Поиск по сайту</h2>
+  <button class="search__close">
+    <svg>
+      <use xlink:href="img/sprites/sprite.svg#icon__close"></use>
+    </svg>
+  </button>
+  <form action="#" class="search__form">
+    <input type="text" class="search__input" placeholder="Поиск">
+  </form>
+  <p class="search__text">Например: Технический надзор</p>
+</section>
+
+<main class="main">
+  <section class="main__breadcrumbs breadcrumbs">
+    <h2 class="visually-hidden">Хлебные крошки</h2>
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item"><a href="">Главная</a></li>
+      <li class="breadcrumbs__item">Отзывы</li>
+    </ul>
+  </section>
+  <h1 class="main__title">отзывы клиентов</h1>
+  <div class="main__inner">
+    <aside class="main__sidebar sidebar">
+      <section class="sidebar__navigation navigation" data-controller="navigation">
+        <h2 class="visually-hidden">Все услуги</h2>
+        <a href="javascript://" data-action="navigation#show" class="navigation__button">Все услуги</a>
+        <nav class="navigation__inner" data-target="navigation.target">
+          <div class="navigation__header">
+            <h2 class="navigation__title">Все услуги</h2>
+            <button class="navigation__close" data-action="navigation#close" >
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#icon__close"></use>
+              </svg>
+            </button>
+          </div>
+          <ul class="navigation__list">
+            <li class="navigation__item"><a href="">Технический заказчик</a></li>
+            <li class="navigation__item"><a href="">Технический заказчик</a></li>
+            <li class="navigation__item"><a href="">Технический заказчик</a></li>
+            <li class="navigation__item"><a href="">Технический заказчик</a></li>
+            <li class="navigation__item"><a href="">Технический заказчик</a></li>
+            <li class="navigation__item"><a href="">Технический заказчик</a></li>
+            <li class="navigation__item"><a href="">Технический заказчик</a></li>
+            <li class="navigation__item"><a href="">Технический заказчик</a></li>
+            <li class="navigation__item"><a href="">Технический заказчик</a></li>
+            <li class="navigation__item"><a href="">Технический заказчик</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section class="sidebar__ask ask">
+        <h2 class="visually-hidden">Задать вопрос</h2>
+        <svg class="ask__icon">
+          <use xlink:href="img/sprites/sprite.svg#icon__list"></use>
+        </svg>
+        <p class="ask__text">Оформите заявку на сайте, мы свяжемся с вами в ближайшее время и ответим на все интересующие вопросы.</p>
+        <a href="" class="ask__button button button--accent">задать вопрос</a>
+      </section>
+      <section class="sidebar__manager manager">
+        <h2 class="visually-hidden">Медеджер</h2>
+        <picture class="manager__img">
+          <source type="image/webp" srcset="img/media-01.webp">
+          <img src="img/media-01.jpg" alt="">
+        </picture>
+        <p class="manager__name">Васекина Ирина</p>
+        <p class="manager__position">РУКОВОДИТЕЛЬ УПРАВЛЕНИЯ МАРКЕТИНГА И КОММУНИКАЦИЙ</p>
+        <ul class="manager__contacts">
+          <li><a href="#">Vasekina@mail.ru</a></li>
+          <li><a href="#">8 (912) 453-43-12</a></li>
+        </ul>
+      </section>
+    </aside>
+    <div class="main__content">
+      <div class="reviews">
+        <p class="reviews__desc">Мы стремимся оказывать качественные услуги с высоким уровнем сервиса. Мы благодарны нашим клиентам за оказанное доверие и положительные отзывы о совместной работе.</p>
+        <a href="" class="reviews__button button button--thin">ОСТАВИТЬ ОТЗЫВ</a>
+        <ul class="reviews__list">
+          <li class="reviews__item">
+            <div class="reviews__body">
+              <p class="reviews__name">Коллектив Отдела хозяйственного обеспечения (ОХО) АО “СНСЗ”</p>
+              <span class="reviews__date">16.12.2019</span>
+              <div class="reviews__content">
+                <p>Уважаемый Алексей Евгеньевич!</p>
+                <p>АО “Средне-Невский Судостроительный Завод” выражает благодарность Вам и всему Вашему коллективу за профессионализм, качественный посадочный материал и поддержку на всех этапах совместной работы.</p>
+                <p>Желаем Вашей компании развития, процветания, финансового благополучия и достижения новых горизонтов.</p>
+              </div>
+              <a href="img/review-01.jpg" data-fancybox class="reviews__img">
+                <picture>
+                  <source type="image/webp" srcset="img/review-01.webp">
+                  <img src="img/review-01.jpg" alt="">
+                </picture>
+              </a>
+            </div>
+          </li>
+          <li class="reviews__item">
+            <div class="reviews__body">
+              <p class="reviews__name">Коллектив Отдела хозяйственного обеспечения (ОХО) АО “СНСЗ”</p>
+              <span class="reviews__date">16.12.2019</span>
+              <div class="reviews__content">
+                <p>Уважаемый Алексей Евгеньевич!</p>
+                <p>АО “Средне-Невский Судостроительный Завод” выражает благодарность Вам и всему Вашему коллективу за профессионализм, качественный посадочный материал и поддержку на всех этапах совместной работы.</p>
+                <p>Желаем Вашей компании развития, процветания, финансового благополучия и достижения новых горизонтов.</p>
+              </div>
+              <a href="img/review-01.jpg" data-fancybox class="reviews__img">
+                <picture>
+                  <source type="image/webp" srcset="img/review-01.webp">
+                  <img src="img/review-01.jpg" alt="">
+                </picture>
+              </a>
+            </div>
+          </li>
+          <li class="reviews__item">
+            <div class="reviews__body">
+              <p class="reviews__name">Коллектив Отдела хозяйственного обеспечения (ОХО) АО “СНСЗ”</p>
+              <span class="reviews__date">16.12.2019</span>
+              <div class="reviews__content">
+                <p>Уважаемый Алексей Евгеньевич!</p>
+                <p>АО “Средне-Невский Судостроительный Завод” выражает благодарность Вам и всему Вашему коллективу за профессионализм, качественный посадочный материал и поддержку на всех этапах совместной работы.</p>
+                <p>Желаем Вашей компании развития, процветания, финансового благополучия и достижения новых горизонтов.</p>
+              </div>
+              <a href="img/review-01.jpg" data-fancybox class="reviews__img">
+                <picture>
+                  <source type="image/webp" srcset="img/review-01.webp">
+                  <img src="img/review-01.jpg" alt="">
+                </picture>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <ul class="main__pagination pagination">
+        <li class="pagination__item  pagination__item--prev">
+          <a href="">
+            <svg width="10" height="10">
+              <use xlink:href="img/sprites/sprite.svg#icon__prev"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="pagination__item"><a href="">1</a></li>
+        <li class="pagination__item"><a href="">2</a></li>
+        <li class="pagination__item  pagination__item--next">
+          <a href="">
+            <svg width="10" height="10">
+              <use xlink:href="img/sprites/sprite.svg#icon__next"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <a href="" class="main__callback button button--accent">Оставить отзыв</a>
+    </div>
+  </div>
+
+
+</main>
+<footer class="footer">
+  <div class="footer__top">
+    <nav class="footer__menu">
+      <ul class="footer__list">
+        <li class="footer__item"><a href="#">Услуги</a></li>
+        <li class="footer__item"><a href="#">Клиентам</a></li>
+        <li class="footer__item"><a href="#">Порфолио</a></li>
+        <li class="footer__item"><a href="#">Медиа</a></li>
+        <li class="footer__item"><a href="#">Отзывы</a></li>
+        <li class="footer__item"><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
+    <div class="footer__contacts">
+      <a href="#" class="footer__phone">8 800 551 34 23</a>
+      <a href="" class="footer__email">mail@globus.group.ru</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p class="footer__copyright">© 2020 ООО “Globus Group”</p>
+    <a href="#" class="footer__politic">Политика конфиденциальности</a>
+    <p class="footer__dev">Разработано в <a href="#"> ARS Creative</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

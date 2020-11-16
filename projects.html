@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Gulp v4.1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png" data-mce-href="/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png" data-mce-href="/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png" data-mce-href="/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png" data-mce-href="/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png" data-mce-href="/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png" data-mce-href="/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png" data-mce-href="/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png" data-mce-href="/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png" data-mce-href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32" data-mce-href="/favicon-32x32.png">
+<link rel="icon" type="image/png" href="img/favicons/android-chrome-192x192.png" sizes="192x192" data-mce-href="/android-chrome-192x192.png">
+<link rel="icon" type="image/png" href="img/favicons/favicon-96x96.png" sizes="96x96" data-mce-href="/favicon-96x96.png">
+<link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16" data-mce-href="/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="img/favicons//mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+  <script src="js/vendor.js"></script>
+  <script src="js/general.js" defer></script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header class="header">
+  <a href="index.html" class="header__logo logo">
+    <picture class="logo__img">
+      <source type="image/webp" srcset="img/logo.webp">
+      <img src="img/logo.png" alt="logo">
+    </picture>
+  </a>
+  <nav class="header__menu menu" data-controller="menu">
+    <button class="burger" data-target="menu.trigger" data-action="click->menu#showMenu">
+      <span class="burger__inner">Открыть меню</span>
+    </button>
+    <ul class="menu__list">
+      <li class="menu__item menu__item--parent" data-target="menu.item">
+        <a href="services.html">Услуги</a>
+        <span class="menu__arrow"></span>
+        <ul class="menu__sub-list">
+          <li class="menu__sub-item"><a href="#">Технический заказчик</a></li>
+          <li class="menu__sub-item"><a href="#">Технический заказчик</a></li>
+          <li class="menu__sub-item"><a href="#">Технический заказчик</a></li>
+        </ul>
+      </li>
+      <li class="menu__item menu__item--parent" data-target="menu.item">
+        <a href="clients.html">Клиентам</a>
+        <span class="menu__arrow"></span>
+        <ul class="menu__sub-list">
+          <li class="menu__sub-item"><a href="#">Технический заказчик</a></li>
+          <li class="menu__sub-item"><a href="#">Технический заказчик</a></li>
+          <li class="menu__sub-item"><a href="#">Технический заказчик</a></li>
+        </ul>
+      </li>
+      <li class="menu__item"><a href="projects.html">Портфолио</a></li>
+      <li class="menu__item"><a href="media.html">Медиа</a></li>
+      <li class="menu__item"><a href="reviews.html">Отзывы</a></li>
+      <li class="menu__item"><a href="contacts.html">Контакты</a></li>
+    </ul>
+  </nav>
+  <a href="javascript://" class="header__search js-search">
+    <svg>
+      <use xlink:href="img/sprites/sprite.svg#icon__search"></use>
+    </svg>
+  </a>
+  <a href="#" class="header__phone">8 800 551 34 23</a>
+  <a href="#" class="header__callback button button--thin">Заказать звонок</a>
+</header>
+<section class="search">
+  <h2 class="visually-hidden">Поиск по сайту</h2>
+  <button class="search__close">
+    <svg>
+      <use xlink:href="img/sprites/sprite.svg#icon__close"></use>
+    </svg>
+  </button>
+  <form action="#" class="search__form">
+    <input type="text" class="search__input" placeholder="Поиск">
+  </form>
+  <p class="search__text">Например: Технический надзор</p>
+</section>
+
+<main class="main">
+  <section class="main__breadcrumbs breadcrumbs">
+    <h2 class="visually-hidden">Хлебные крошки</h2>
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item"><a href="">Главная</a></li>
+      <li class="breadcrumbs__item">НАШИ ПРОЕКТЫ</li>
+    </ul>
+  </section>
+  <h1 class="main__title">НАШИ ПРОЕКТЫ</h1>
+  <ul class="main__categories">
+    <li class="main__category main__category--active"><a href="#">Завершенные проекты</a></li>
+    <li class="main__category"><a href="#">Текущие проекты</a></li>
+  </ul>
+  <ul class="main__list">
+    <li class="projects__item project-card">
+      <a href="single-project.html" class="project-card__img">
+        <picture>
+          <source type="image/webp" srcset="img/project-01.webp">
+          <img src="img/project-01.jpg" alt="01">
+        </picture>
+      </a>
+      <a href="single-project.html" class="project-card__title">ЖК «Евразия»</a>
+      <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+    </li>
+    <li class="projects__item project-card">
+      <a href="single-project.html" class="project-card__img">
+        <picture>
+          <source type="image/webp" srcset="img/project-01.webp">
+          <img src="img/project-01.jpg" alt="01">
+        </picture>
+      </a>
+      <a href="single-project.html" class="project-card__title">ЖК «Евразия»</a>
+      <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+    </li>
+    <li class="projects__item project-card">
+      <a href="single-project.html" class="project-card__img">
+        <picture>
+          <source type="image/webp" srcset="img/project-01.webp">
+          <img src="img/project-01.jpg" alt="01">
+        </picture>
+      </a>
+      <a href="single-project.html" class="project-card__title">ЖК «Евразия»</a>
+      <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+    </li>
+    <li class="projects__item project-card">
+      <a href="single-project.html" class="project-card__img">
+        <picture>
+          <source type="image/webp" srcset="img/project-01.webp">
+          <img src="img/project-01.jpg" alt="01">
+        </picture>
+      </a>
+      <a href="single-project.html" class="project-card__title">ЖК «Евразия»</a>
+      <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+    </li>
+    <li class="projects__item project-card">
+      <a href="single-project.html" class="project-card__img">
+        <picture>
+          <source type="image/webp" srcset="img/project-01.webp">
+          <img src="img/project-01.jpg" alt="01">
+        </picture>
+      </a>
+      <a href="single-project.html" class="project-card__title">ЖК «Евразия»</a>
+      <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+    </li>
+    <li class="projects__item project-card">
+      <a href="single-project.html" class="project-card__img">
+        <picture>
+          <source type="image/webp" srcset="img/project-01.webp">
+          <img src="img/project-01.jpg" alt="01">
+        </picture>
+      </a>
+      <a href="single-project.html" class="project-card__title">ЖК «Евразия»</a>
+      <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+    </li>
+    <li class="projects__item project-card">
+      <a href="single-project.html" class="project-card__img">
+        <picture>
+          <source type="image/webp" srcset="img/project-01.webp">
+          <img src="img/project-01.jpg" alt="01">
+        </picture>
+      </a>
+      <a href="single-project.html" class="project-card__title">ЖК «Евразия»</a>
+      <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+    </li>
+    <li class="projects__item project-card">
+      <a href="single-project.html" class="project-card__img">
+        <picture>
+          <source type="image/webp" srcset="img/project-01.webp">
+          <img src="img/project-01.jpg" alt="01">
+        </picture>
+      </a>
+      <a href="single-project.html" class="project-card__title">ЖК «Евразия»</a>
+      <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+    </li>
+    <li class="projects__item project-card">
+      <a href="single-project.html" class="project-card__img">
+        <picture>
+          <source type="image/webp" srcset="img/project-01.webp">
+          <img src="img/project-01.jpg" alt="01">
+        </picture>
+      </a>
+      <a href="single-project.html" class="project-card__title">ЖК «Евразия»</a>
+      <p class="project-card__desc">Проект благоустройства территории жилой среды</p>
+    </li>
+  </ul>
+  <ul class="main__pagination pagination">
+    <li class="pagination__item  pagination__item--prev">
+      <a href="">
+        <svg width="10" height="10">
+          <use xlink:href="img/sprites/sprite.svg#icon__prev"></use>
+        </svg>
+      </a>
+    </li>
+    <li class="pagination__item"><a href="">1</a></li>
+    <li class="pagination__item"><a href="">2</a></li>
+    <li class="pagination__item  pagination__item--next">
+      <a href="">
+        <svg width="10" height="10">
+          <use xlink:href="img/sprites/sprite.svg#icon__next"></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</main>
+<footer class="footer">
+  <div class="footer__top">
+    <nav class="footer__menu">
+      <ul class="footer__list">
+        <li class="footer__item"><a href="#">Услуги</a></li>
+        <li class="footer__item"><a href="#">Клиентам</a></li>
+        <li class="footer__item"><a href="#">Порфолио</a></li>
+        <li class="footer__item"><a href="#">Медиа</a></li>
+        <li class="footer__item"><a href="#">Отзывы</a></li>
+        <li class="footer__item"><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
+    <div class="footer__contacts">
+      <a href="#" class="footer__phone">8 800 551 34 23</a>
+      <a href="" class="footer__email">mail@globus.group.ru</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p class="footer__copyright">© 2020 ООО “Globus Group”</p>
+    <a href="#" class="footer__politic">Политика конфиденциальности</a>
+    <p class="footer__dev">Разработано в <a href="#"> ARS Creative</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
