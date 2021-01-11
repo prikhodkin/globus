@@ -14,6 +14,11 @@ class Tabs {
         this.toggleTab(item);
       })
     })
+
+    const opacity = document.querySelector(`.tabs__content--opacity`);
+    setTimeout(() => {
+      opacity.classList.remove(`tabs__content--opacity`);
+    }, 800)
   }
 
   setOptions(x) {
@@ -37,6 +42,11 @@ class Tabs {
 
     this.toggleClass(activeTab, item, this.DEFAULT_OPTION.TAB_ACTIVE_CLASS);
     this.toggleClass(activeContent, content, this.DEFAULT_OPTION.CONTENT_ACTIVE_CLASS);
+    this.toggleClass(activeContent, content, 'tabs__content--opacity');
+
+    setTimeout(()=> {
+      content.classList.remove('tabs__content--opacity')
+    },400)
   }
 
   toggleClass(activeTarget, disableTarget, activeClass) {

@@ -2,8 +2,21 @@
   padding: 30px 15px 60px 15px;
 }
 
+.services__item {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  flex-grow: 1;
+  align-self: stretch;
+}
+
 .services__list {
   @include list-reset;
+  align-items: stretch;
+}
+
+.services-card__desc {
+  margin-top: auto;
 }
 
 .services__controls {

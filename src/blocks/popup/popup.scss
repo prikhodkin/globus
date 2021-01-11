@@ -1,0 +1,143 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  background: 0 0;
+  opacity: 0;
+  pointer-events: none;
+
+
+  &.opened {
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.68);
+    cursor: pointer;
+    opacity: 1;
+    pointer-events: auto;
+
+    .popup__wrapper {
+      transform: translateY(0);
+    }
+  }
+}
+
+.popup__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 70px 20px;
+  overflow: auto;
+  transform: translateY(-30px);
+  transition: opacity 0.3s, transform 0.5s;
+}
+
+.popup__body {
+  background: #FFFFFF;
+  border: 1px solid #CBCBDD;
+  box-sizing: border-box;
+  border-radius: 3px;
+  position: relative;
+  padding: 30px 20px;
+  max-width: 505px;
+}
+
+.popup__close {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: -38px;
+  background: transparent;
+
+  svg {
+    fill: #ffffff;
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.popup__title {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 45px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4E5755;
+  margin-bottom: 25px;
+}
+
+.popup__desc {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+  color: #858C92;
+  margin-bottom: 44px;
+}
+
+.popup__politic {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #B7B1B1;
+  max-width: 286px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 45px;
+}
+
+.popup__form {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.popup__button {
+  width: 100%;
+}
+
+.popup__input {
+  border: 1px solid #BCC6DA;
+  box-sizing: border-box;
+  border-radius: 3px;
+  height: 60px;
+  width: 100%;
+  display: block;
+  padding: 0 25px;
+  margin-bottom: 20px;
+}
+
+.popup__textarea {
+  border: 1px solid #BCC6DA;
+  box-sizing: border-box;
+  border-radius: 3px;
+  min-height: 130px;
+  width: 100%;
+  display: block;
+  padding: 25px;
+  margin-bottom: 20px;
+  resize: vertical;
+  display: block;
+
+}
+
+@media (min-width: 768px) {
+  .popup__body {
+    padding: 60px 65px 40px 65px;
+  }
+
+  .popup__close {
+    right: -38px;
+    top: -11px;
+  }
+}

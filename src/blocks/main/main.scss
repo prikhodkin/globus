@@ -2,6 +2,24 @@
   padding: 30px 15px 80px 15px;
 }
 
+.main__controls {
+  position: relative;
+}
+
+.main__share-content {
+  position: absolute;
+  right: 17px;
+  top: -35px;
+  opacity: 0;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.main__share-content--active {
+  z-index: 1;
+  opacity: 1;
+}
+
 .main__tags {
   @include list-reset;
   display: flex;
@@ -144,6 +162,7 @@
   }
 }
 
+
 .main__controls {
   display: flex;
   flex-wrap: wrap;
@@ -263,6 +282,7 @@
 
   .main__list {
     margin-bottom: 90px;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 368px));
   }
 
   .main__title {
